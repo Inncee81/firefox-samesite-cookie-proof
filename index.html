@@ -32,7 +32,7 @@ function getCookie(name) {
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
 
-  el.addEventListener("click", function() {
+  document.getElementById("test-button").addEventListener("click", function() {
     document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=3";
     document.getElementById("test").innerHTML = getCookie("FOO");
   });
