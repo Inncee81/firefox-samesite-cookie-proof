@@ -15,7 +15,7 @@ function getCookie(name) {
   if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
-document.cookie = "FOO=bar; SameSite=Strict; Secure"
+document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=3"
 
 document.getElementById("test").innerHTML = getCookie("FOO")
 </code>
@@ -30,7 +30,7 @@ function getCookie(name) {
   if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
-document.cookie = "FOO=bar; SameSite=Strict; Secure"
+document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=3"
 
 document.getElementById("test").innerHTML = getCookie("FOO")
 </script>
