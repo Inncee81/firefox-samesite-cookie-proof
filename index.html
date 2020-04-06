@@ -5,8 +5,8 @@
   </head>
 <body>
 <noscript>You need to enable JavaScript to run this example.</noscript>
-<h1>Proof:</h1>
-<p>Here the result of 
+<h1>Proof that Firefox is not behaving like expected:</h1>
+  <p>The result of the following snippet is shown below. <pre>undefined</pre> on FireFox, <pre>bar</pre> on other browsers like Chrome.
 <pre>
 <code class="language-javascript">
 function getCookie(name) {
@@ -20,7 +20,7 @@ document.cookie = "FOO=bar; SameSite=Strict; Secure"
 document.getElementById("test").innerHTML = getCookie("FOO")
 </code>
 </pre>
-is shown (open in different browsers):</p>
+</p>
 <p id="test">
 </p>
 <script>
