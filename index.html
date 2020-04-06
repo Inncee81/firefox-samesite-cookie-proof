@@ -16,7 +16,7 @@ function getCookie(name) {
   }
 
   document.getElementById("test-button").addEventListener("click", function() {
-    document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=3";
+    document.cookie = "FOO=bar-" + new Date().toISOString() + "; SameSite=Strict; Secure; Max-Age=3";
     document.getElementById("test").innerHTML = getCookie("FOO");
   });
 </code>
@@ -33,7 +33,7 @@ function getCookie(name) {
   }
 
   document.getElementById("test-button").addEventListener("click", function() {
-    document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=3";
+    document.cookie = "FOO=bar-" + new Date().toISOString() + "; SameSite=Strict; Secure; Max-Age=3";
     document.getElementById("test").innerHTML = getCookie("FOO");
   });
 </script>
