@@ -1,0 +1,33 @@
+<html>
+<body>
+<h1>Proof:</h1>
+<p>Here the result of 
+<pre>
+<code>
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=60"
+
+document.getElementById("test").innerHTML = getCookie("FOO")
+</code>
+</pre>
+is shown (open in different browsers):</p>
+<p id="test">
+</p>
+<script>
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
+}
+
+document.cookie = "FOO=bar; SameSite=Strict; Secure; Max-Age=60"
+
+document.getElementById("test").innerHTML = getCookie("FOO")
+</script>
+</body>
+</html>
